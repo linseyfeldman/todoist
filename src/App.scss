@@ -19,7 +19,7 @@ body {
   line-height: 1;
   font-family: 'Roboto', sans-serif;
   color: #202020;
-  background-color: #fafafa;
+  background-color: #f4faf4;
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -32,8 +32,8 @@ ul {
 
 // Variables
 $generic-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 4px 11px;
-$generic-border: 1px solid #f1f1f1;
-$generic-bg: #db4c3f;
+$generic-border: 1px solid #d6edd6;
+$generic-bg: #2e7d32;
 
 /* Mixins
   ============================================ */
@@ -117,12 +117,12 @@ $generic-bg: #db4c3f;
   padding-bottom: 10px;
   font-size: 14px;
   list-style-type: none;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #d6edd6;
   padding-left: 10px;
   cursor: pointer;
 
   &:hover {
-    background-color: #f9f9f9;
+    background-color: #f0faf0;
   }
 }
 
@@ -138,7 +138,7 @@ $generic-bg: #db4c3f;
   header {
     -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
     box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
-    background-color: #282828;
+    background-color: #1b5e20;
     border-color: transparent;
   }
 }
@@ -146,7 +146,7 @@ $generic-bg: #db4c3f;
 /* Header
   ============================================ */
 header {
-  border-bottom: solid 1px #ca2100;
+  border-bottom: solid 1px #1b5e20;
   background-color: $generic-bg;
   -webkit-transition: height 200ms ease-in;
   transition: height 200ms ease-in;
@@ -258,7 +258,7 @@ header {
   overflow-x: hidden;
   overflow-y: hidden;
   border-right: $generic-border;
-  background-color: #fafafa;
+  background-color: #f4faf4;
 
   @include mq('900px') {
     display: none;
@@ -293,13 +293,13 @@ header {
       display: none;
 
       svg {
-        color: #cacaca;
+        color: #a5d6a7;
       }
     }
 
     &.active, &:hover {
       font-weight: bold;
-      background-color: white;
+      background-color: #e8f5e9;
     }
 
     &:nth-child(1) {
@@ -309,22 +309,22 @@ header {
     }
     &:nth-child(2) {
       .sidebar__dot {
-        color: #fad003;
+        color: #66bb6a;
       }
     }
     &:nth-child(3) {
       .sidebar__dot {
-        color: #ff8d85;
+        color: #a5d6a7;
       }
     }
     &:nth-child(4) {
       .sidebar__dot {
-        color: #ff9932;
+        color: #43a047;
       }
     }
     &:nth-child(5) {
       .sidebar__dot {
-        color: #af38eb;
+        color: #1b5e20;
       }
     }
   }
@@ -353,7 +353,7 @@ header {
     cursor: pointer;
 
     span {
-      color: #0000008a;
+      color: #2e7d3280;
       margin-right: 10px;
 
       svg.hidden-projects {
@@ -364,7 +364,7 @@ header {
 
     h2 {
       margin: 0;
-      color: #333;
+      color: #1b5e20;
       font-size: 15px;
       font-weight: bold;
       padding-bottom: 20px;
@@ -403,14 +403,14 @@ header {
           svg {
             width: 18px;
             height: 18px;
-            color: #555;
+            color: #388e3c;
           }
         }
       }
 
       &.active, &:hover {
         font-weight: bold;
-        background-color: white;
+        background-color: #e8f5e9;
       }
     }
   }
@@ -499,7 +499,7 @@ header {
     padding-bottom: 10px;
     font-size: 14px;
     list-style-type: none;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #d6edd6;
 
     .checkbox-holder {
       margin-right: 20px;
@@ -516,12 +516,12 @@ header {
 
       .checkbox {
         cursor: pointer;
-        border-color: gray;
-        color: #343434;
+        border-color: #388e3c;
+        color: #2e7d32;
         height: 16px;
         width: 16px;
         display: block;
-        border: 1px solid gray;
+        border: 1px solid #388e3c;
         border-radius: 16px;
       }
     }
@@ -532,7 +532,7 @@ header {
   ============================================ */
 .add-task {
   &__overlay {
-    background: rgba(102,102,102,0.5);
+    background: rgba(46, 125, 50, 0.35);
     position: absolute;
     margin: auto;
     top: 0;
@@ -570,7 +570,7 @@ header {
 
     .add-task__cancel-x {
       cursor: pointer;
-      color: gray;
+      color: #388e3c;
       float: right;
       font-weight: bold;
       font-size: 12px;
@@ -585,7 +585,7 @@ header {
   &__project, &__date {
     cursor: pointer;
     float: right;
-    color: gray;
+    color: #388e3c;
     margin: 20px 10px;
   }
 
@@ -595,7 +595,7 @@ header {
 
   &__content {
     width: 100%;
-    border: 1px solid #ddd;
+    border: 1px solid #a5d6a7;
     background-color: white !important;
     border-radius: 3px;
     height: 35px;
@@ -623,13 +623,13 @@ header {
 }
 
 .add-task__plus, .add-project__plus {
-  color: #dd4b39;
+  color: #2e7d32;
   font-size: 18px;
 }
 
 .add-task__text, .add-project__text {
   display: inline-block;
-  color: #545454;
+  color: #388e3c;
   font-size: 14px;
   margin-left: 15px;
 }
@@ -660,7 +660,7 @@ header {
         margin-right: 10px;
 
         svg {
-          fill: grey;
+          fill: #388e3c;
         }
       }
     }
@@ -702,7 +702,7 @@ header {
 
   &__name {
     width: 100%;
-    border: 1px solid #ddd;
+    border: 1px solid #a5d6a7;
     background-color: white !important;
     border-radius: 3px;
     height: 35px;
