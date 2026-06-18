@@ -33,7 +33,7 @@ ul {
 // Variables
 $generic-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 4px 11px;
 $generic-border: 1px solid #f1f1f1;
-$generic-bg: #e91e63;
+$generic-bg: #39FF14;
 
 /* Mixins
   ============================================ */
@@ -77,7 +77,7 @@ $generic-bg: #e91e63;
 @mixin btn($width) {
   width: $width;
   background-color: $generic-bg;
-  color: #fff !important;
+  color: #000 !important;
   border: 1px solid transparent;
   margin-right: 5px;
   margin-top: 10px;
@@ -92,6 +92,11 @@ $generic-bg: #e91e63;
   text-decoration: none !important;
   text-align: center;
   cursor: pointer;
+
+  &:hover {
+    background-color: #32e612;
+    border-color: #32e612;
+  }
 }
 
 @mixin cancel() {
@@ -314,7 +319,7 @@ header {
     }
     &:nth-child(3) {
       .sidebar__dot {
-        color: #e91e63;
+        color: #39FF14;
       }
     }
     &:nth-child(4) {
@@ -623,7 +628,7 @@ header {
 }
 
 .add-task__plus, .add-project__plus {
-  color: #e91e63;
+  color: #39FF14;
   font-size: 18px;
 }
 
