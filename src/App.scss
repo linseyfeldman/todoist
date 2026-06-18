@@ -3,6 +3,21 @@
    ========================================================================== */
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900');
 
+// Pink Theme Variables
+$pink-lightest:   #fce4ec;   // Pink 50  — page background tint
+$pink-light:      #f48fb1;   // Pink 200 — hover highlights
+$pink-mid:        #f06292;   // Pink 300 — sidebar dot 1
+$pink-400:        #ec407a;   // Pink 400 — sidebar dot 2
+$pink-base:       #e91e63;   // Pink 500 — primary brand / buttons
+$pink-dark:       #c2185b;   // Pink 700 — header border / sidebar dot 4
+$pink-darker:     #ad1457;   // Pink 800 — sidebar dot 5
+$pink-deep:       #880e4f;   // Pink 900 — darkmode header shadow accent
+
+// General Variables
+$generic-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 4px 11px;
+$generic-border: 1px solid #f1f1f1;
+$generic-bg: $pink-base;     // alias so @mixin btn and other usages need no changes
+
 // General Settings
 html {
   -webkit-box-sizing: border-box;
@@ -19,7 +34,7 @@ body {
   line-height: 1;
   font-family: 'Roboto', sans-serif;
   color: #202020;
-  background-color: #fafafa;
+  background-color: $pink-lightest;
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -29,11 +44,6 @@ ul {
   margin: 0;
   padding: 0;
 }
-
-// Variables
-$generic-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 4px 11px;
-$generic-border: 1px solid #f1f1f1;
-$generic-bg: #e91e63;
 
 /* Mixins
   ============================================ */
@@ -92,6 +102,10 @@ $generic-bg: #e91e63;
   text-decoration: none !important;
   text-align: center;
   cursor: pointer;
+
+  &:hover {
+    background-color: $pink-dark;
+  }
 }
 
 @mixin cancel() {
@@ -122,7 +136,7 @@ $generic-bg: #e91e63;
   cursor: pointer;
 
   &:hover {
-    background-color: #f9f9f9;
+    background-color: $pink-lightest;
   }
 }
 
@@ -136,8 +150,8 @@ $generic-bg: #e91e63;
   ============================================ */
 .darkmode {
   header {
-    -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0 1px 3px 0 rgba($pink-deep, 0.3);
+            box-shadow: 0 1px 3px 0 rgba($pink-deep, 0.3);
     background-color: #282828;
     border-color: transparent;
   }
@@ -146,8 +160,8 @@ $generic-bg: #e91e63;
 /* Header
   ============================================ */
 header {
-  border-bottom: solid 1px #c2185b;
-  background-color: $generic-bg;
+  border-bottom: solid 1px $pink-dark;
+  background-color: $pink-base;
   -webkit-transition: height 200ms ease-in;
   transition: height 200ms ease-in;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
@@ -299,32 +313,32 @@ header {
 
     &.active, &:hover {
       font-weight: bold;
-      background-color: white;
+      background-color: $pink-lightest;
     }
 
     &:nth-child(1) {
       .sidebar__dot {
-        color: #f06292;
+        color: $pink-mid;
       }
     }
     &:nth-child(2) {
       .sidebar__dot {
-        color: #ec407a;
+        color: $pink-400;
       }
     }
     &:nth-child(3) {
       .sidebar__dot {
-        color: #e91e63;
+        color: $pink-base;
       }
     }
     &:nth-child(4) {
       .sidebar__dot {
-        color: #c2185b;
+        color: $pink-dark;
       }
     }
     &:nth-child(5) {
       .sidebar__dot {
-        color: #ad1457;
+        color: $pink-darker;
       }
     }
   }
@@ -410,7 +424,7 @@ header {
 
       &.active, &:hover {
         font-weight: bold;
-        background-color: white;
+        background-color: $pink-lightest;
       }
     }
   }
@@ -523,6 +537,10 @@ header {
         display: block;
         border: 1px solid gray;
         border-radius: 16px;
+
+        &:hover {
+          border-color: $pink-base;
+        }
       }
     }
   }
@@ -601,6 +619,12 @@ header {
     height: 35px;
     padding-left: 10px;
     padding-right: 10px;
+
+    &:focus {
+      outline: none;
+      border-color: $pink-base;
+      box-shadow: 0 0 0 2px rgba($pink-base, 0.2);
+    }
   }
 
   &__cancel, &__submit {
@@ -623,7 +647,7 @@ header {
 }
 
 .add-task__plus, .add-project__plus {
-  color: #e91e63;
+  color: $pink-base;
   font-size: 18px;
 }
 
@@ -708,6 +732,12 @@ header {
     height: 35px;
     padding-left: 10px;
     padding-right: 10px;
+
+    &:focus {
+      outline: none;
+      border-color: $pink-base;
+      box-shadow: 0 0 0 2px rgba($pink-base, 0.2);
+    }
   }
 
   &__submit {
