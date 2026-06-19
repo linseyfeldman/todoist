@@ -1,5 +1,5 @@
 /* ==========================================================================
-   LETS BUILD TODOIST
+   LETS BUILD TODOIST — Pink Reskin
    ========================================================================== */
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900');
 
@@ -18,8 +18,8 @@ body {
   padding: 0;
   line-height: 1;
   font-family: 'Roboto', sans-serif;
-  color: #202020;
-  background-color: #fafafa;
+  color: #3d1a26;
+  background-color: #fff0f5;
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -30,10 +30,18 @@ ul {
   padding: 0;
 }
 
-// Variables
-$generic-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 4px 11px;
-$generic-border: 1px solid #f1f1f1;
-$generic-bg: #e91e63;
+// Pink Palette Variables
+$pink-primary:    #e91e8c;   // vivid hot pink — main brand colour
+$pink-dark:       #b5135f;   // deep rose — header border / hover
+$pink-medium:     #f06292;   // medium pink — accents
+$pink-light:      #fce4ec;   // blush — sidebar / content bg
+$pink-pale:       #fff0f5;   // near-white pink — page bg
+$pink-text:       #3d1a26;   // dark rose — body text
+$pink-muted:      #c2185b;   // muted rose — secondary text / icons
+
+$generic-box-shadow: rgba(185, 0, 80, 0.12) 0px 0px 0px 1px, rgba(185, 0, 80, 0.12) 0px 4px 11px;
+$generic-border: 1px solid #f8bbd0;
+$generic-bg: $pink-primary;
 
 /* Mixins
   ============================================ */
@@ -92,13 +100,21 @@ $generic-bg: #e91e63;
   text-decoration: none !important;
   text-align: center;
   cursor: pointer;
+
+  &:hover {
+    background-color: $pink-dark;
+  }
 }
 
 @mixin cancel() {
-  color: #555;
+  color: $pink-muted;
   cursor: pointer;
   font-size: 14px;
   margin: 2px 5px;
+
+  &:hover {
+    color: $pink-primary;
+  }
 }
 
 @mixin transparent-button() {
@@ -112,17 +128,17 @@ $generic-bg: #e91e63;
   display: -ms-flexbox;
   display: flex;
   line-height: 18px;
-  color: #333;
+  color: $pink-text;
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: 14px;
   list-style-type: none;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f8bbd0;
   padding-left: 10px;
   cursor: pointer;
 
   &:hover {
-    background-color: #f9f9f9;
+    background-color: $pink-light;
   }
 }
 
@@ -135,23 +151,109 @@ $generic-bg: #e91e63;
 /* Darkmode
   ============================================ */
 .darkmode {
+  background-color: #1a0a10;
+  color: #f8bbd0;
+
   header {
-    -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
-    background-color: #282828;
-    border-color: transparent;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.4);
+            box-shadow: 0 1px 3px 0 rgba(0,0,0,0.4);
+    background-color: #2d0a1a;
+    border-color: #5c1a35;
+  }
+
+  .sidebar {
+    background-color: #240d16;
+    border-right-color: #5c1a35;
+
+    &__project {
+      &.active, &:hover {
+        background-color: #3a1020;
+      }
+    }
+
+    &__generic li {
+      color: #f8bbd0;
+
+      &.active, &:hover {
+        background-color: #3a1020;
+      }
+
+      div:nth-child(1) span:first-of-type svg {
+        color: #f06292;
+      }
+    }
+
+    &__middle h2 {
+      color: #f8bbd0;
+    }
+
+    &__middle span {
+      color: #f06292;
+    }
+  }
+
+  .tasks {
+    background-color: #1f0b13;
+    border-right-color: #5c1a35;
+    color: #f8bbd0;
+
+    h2 {
+      color: #f8bbd0;
+    }
+
+    &__list li {
+      border-bottom-color: #5c1a35;
+      color: #f8bbd0;
+
+      .checkbox-holder .checkbox {
+        border-color: #f06292;
+      }
+    }
+  }
+
+  .add-task {
+    &__content {
+      background-color: #2d0a1a !important;
+      border-color: #5c1a35;
+      color: #f8bbd0;
+    }
+  }
+
+  .add-project {
+    &__name {
+      background-color: #2d0a1a !important;
+      border-color: #5c1a35;
+      color: #f8bbd0;
+    }
+  }
+
+  .project-overlay,
+  .task-date,
+  .project-delete-modal__inner {
+    background-color: #2d0a1a;
+    border-color: #5c1a35;
+    color: #f8bbd0;
+
+    li {
+      border-bottom-color: #5c1a35;
+      color: #f8bbd0;
+
+      &:hover {
+        background-color: #3a1020;
+      }
+    }
   }
 }
 
 /* Header
   ============================================ */
 header {
-  border-bottom: solid 1px #c2185b;
-  background-color: $generic-bg;
+  border-bottom: solid 2px $pink-dark;
+  background: linear-gradient(135deg, $pink-primary 0%, #f06292 100%);
   -webkit-transition: height 200ms ease-in;
-  transition: height 200ms ease-in;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+          transition: height 200ms ease-in;
+  -webkit-box-shadow: 0 2px 6px rgba(185, 0, 80, 0.35);
+          box-shadow: 0 2px 6px rgba(185, 0, 80, 0.35);
   height: 44px;
   z-index: 400;
   position: fixed;
@@ -187,7 +289,6 @@ header {
         img {
           width: 24px;
         }
-
       }
 
       &.settings {
@@ -211,7 +312,7 @@ header {
 
           &:hover {
             border-radius: 3px;
-            background-color: rgba(255,255,255,0.2);
+            background-color: rgba(255,255,255,0.25);
           }
 
           &.settings__add {
@@ -239,7 +340,6 @@ header {
                 height: 20px;
               }
             }
-
           }
         }
       }
@@ -258,7 +358,7 @@ header {
   overflow-x: hidden;
   overflow-y: hidden;
   border-right: $generic-border;
-  background-color: #fafafa;
+  background-color: $pink-light;
 
   @include mq('900px') {
     display: none;
@@ -293,38 +393,38 @@ header {
       display: none;
 
       svg {
-        color: #cacaca;
+        color: #f06292;
       }
     }
 
     &.active, &:hover {
       font-weight: bold;
-      background-color: white;
+      background-color: #fce4ec;
     }
 
     &:nth-child(1) {
       .sidebar__dot {
-        color: #f06292;
+        color: #f48fb1;
       }
     }
     &:nth-child(2) {
       .sidebar__dot {
-        color: #ec407a;
+        color: #f06292;
       }
     }
     &:nth-child(3) {
       .sidebar__dot {
-        color: #e91e63;
+        color: $pink-primary;
       }
     }
     &:nth-child(4) {
       .sidebar__dot {
-        color: #c2185b;
+        color: $pink-muted;
       }
     }
     &:nth-child(5) {
       .sidebar__dot {
-        color: #ad1457;
+        color: $pink-dark;
       }
     }
   }
@@ -353,7 +453,7 @@ header {
     cursor: pointer;
 
     span {
-      color: #0000008a;
+      color: $pink-primary;
       margin-right: 10px;
 
       svg.hidden-projects {
@@ -364,7 +464,7 @@ header {
 
     h2 {
       margin: 0;
-      color: #333;
+      color: $pink-text;
       font-size: 15px;
       font-weight: bold;
       padding-bottom: 20px;
@@ -374,7 +474,7 @@ header {
   &__generic {
     li {
       list-style-type: none;
-      color: #333;
+      color: $pink-text;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -403,14 +503,14 @@ header {
           svg {
             width: 18px;
             height: 18px;
-            color: #555;
+            color: $pink-medium;
           }
         }
       }
 
       &.active, &:hover {
         font-weight: bold;
-        background-color: white;
+        background-color: #fce4ec;
       }
     }
   }
@@ -429,6 +529,7 @@ header {
     top: 10px;
     right: 0;
     background-color: white;
+    border: 1px solid #f8bbd0;
 
     p {
       margin-top: 5px;
@@ -436,6 +537,7 @@ header {
       line-height: normal;
       font-weight: normal;
       font-size: 15px;
+      color: $pink-text;
     }
 
     button {
@@ -483,6 +585,7 @@ header {
     font-size: 20px;
     font-weight: normal;
     margin: 0 30px 20px 0;
+    color: $pink-text;
   }
 
   .add-task {
@@ -494,12 +597,16 @@ header {
     display: -ms-flexbox;
     display: flex;
     line-height: 18px;
-    color: #333;
+    color: $pink-text;
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 14px;
     list-style-type: none;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f8bbd0;
+
+    &:hover {
+      background-color: $pink-pale;
+    }
 
     .checkbox-holder {
       margin-right: 20px;
@@ -516,13 +623,18 @@ header {
 
       .checkbox {
         cursor: pointer;
-        border-color: gray;
-        color: #343434;
+        color: $pink-text;
         height: 16px;
         width: 16px;
         display: block;
-        border: 1px solid gray;
+        border: 2px solid $pink-medium;
         border-radius: 16px;
+        transition: border-color 0.2s, background-color 0.2s;
+
+        &:hover {
+          border-color: $pink-primary;
+          background-color: #fce4ec;
+        }
       }
     }
   }
@@ -532,7 +644,7 @@ header {
   ============================================ */
 .add-task {
   &__overlay {
-    background: rgba(102,102,102,0.5);
+    background: rgba(180, 0, 80, 0.35);
     position: absolute;
     margin: auto;
     top: 0;
@@ -541,7 +653,7 @@ header {
     height: 100%;
     z-index: 2000;
     -webkit-transition: opacity 0.2s ease-in;
-    transition: opacity 0.2s ease-in;
+            transition: opacity 0.2s ease-in;
     height: calc(100vh);
 
     .add-task__main {
@@ -560,21 +672,27 @@ header {
       padding: 20px 30px;
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
+      border-top: 3px solid $pink-primary;
 
       .header {
         font-size: 13px;
         margin-bottom: 20px;
         float: left;
+        color: $pink-text;
       }
     }
 
     .add-task__cancel-x {
       cursor: pointer;
-      color: gray;
+      color: $pink-muted;
       float: right;
       font-weight: bold;
       font-size: 12px;
       margin-top: 10px;
+
+      &:hover {
+        color: $pink-primary;
+      }
     }
   }
 
@@ -585,8 +703,12 @@ header {
   &__project, &__date {
     cursor: pointer;
     float: right;
-    color: gray;
+    color: $pink-medium;
     margin: 20px 10px;
+
+    &:hover {
+      color: $pink-primary;
+    }
   }
 
   &__project {
@@ -595,12 +717,19 @@ header {
 
   &__content {
     width: 100%;
-    border: 1px solid #ddd;
+    border: 1px solid #f8bbd0;
     background-color: white !important;
     border-radius: 3px;
     height: 35px;
     padding-left: 10px;
     padding-right: 10px;
+    color: $pink-text;
+
+    &:focus {
+      outline: none;
+      border-color: $pink-primary;
+      box-shadow: 0 0 0 2px rgba(233, 30, 140, 0.15);
+    }
   }
 
   &__cancel, &__submit {
@@ -623,15 +752,19 @@ header {
 }
 
 .add-task__plus, .add-project__plus {
-  color: #e91e63;
+  color: $pink-primary;
   font-size: 18px;
 }
 
 .add-task__text, .add-project__text {
   display: inline-block;
-  color: #545454;
+  color: $pink-muted;
   font-size: 14px;
   margin-left: 15px;
+
+  &:hover {
+    color: $pink-primary;
+  }
 }
 
 /* Task Date
@@ -641,6 +774,7 @@ header {
   background-color: #fff;
   width: 200px;
   right: 0;
+  border: 1px solid #f8bbd0;
 
   &__list li {
     @include task-item();
@@ -660,7 +794,7 @@ header {
         margin-right: 10px;
 
         svg {
-          fill: grey;
+          fill: $pink-medium;
         }
       }
     }
@@ -672,6 +806,7 @@ header {
 .project-overlay {
   @include box-overlay();
   background-color: white;
+  border: 1px solid #f8bbd0;
 
   @include mq('900px') {
     width: 200px;
@@ -702,12 +837,19 @@ header {
 
   &__name {
     width: 100%;
-    border: 1px solid #ddd;
+    border: 1px solid #f8bbd0;
     background-color: white !important;
     border-radius: 3px;
     height: 35px;
     padding-left: 10px;
     padding-right: 10px;
+    color: $pink-text;
+
+    &:focus {
+      outline: none;
+      border-color: $pink-primary;
+      box-shadow: 0 0 0 2px rgba(233, 30, 140, 0.15);
+    }
   }
 
   &__submit {
