@@ -33,7 +33,7 @@ ul {
 // Variables
 $generic-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 4px 11px;
 $generic-border: 1px solid #f1f1f1;
-$generic-bg: #e91e63;
+$generic-bg: #e65100;   // deep orange 900 — primary brand color
 
 /* Mixins
   ============================================ */
@@ -146,7 +146,7 @@ $generic-bg: #e91e63;
 /* Header
   ============================================ */
 header {
-  border-bottom: solid 1px #c2185b;
+  border-bottom: solid 1px #bf360c;   // deep orange 900 darkened
   background-color: $generic-bg;
   -webkit-transition: height 200ms ease-in;
   transition: height 200ms ease-in;
@@ -304,27 +304,27 @@ header {
 
     &:nth-child(1) {
       .sidebar__dot {
-        color: #f06292;
+        color: #ffb74d;  // orange 300
       }
     }
     &:nth-child(2) {
       .sidebar__dot {
-        color: #ec407a;
+        color: #fb8c00;  // orange 600
       }
     }
     &:nth-child(3) {
       .sidebar__dot {
-        color: #e91e63;
+        color: #e65100;  // deep orange 900
       }
     }
     &:nth-child(4) {
       .sidebar__dot {
-        color: #c2185b;
+        color: #bf360c;  // deep orange 900 dark
       }
     }
     &:nth-child(5) {
       .sidebar__dot {
-        color: #ad1457;
+        color: #8d1f00;  // custom darkest
       }
     }
   }
@@ -623,7 +623,7 @@ header {
 }
 
 .add-task__plus, .add-project__plus {
-  color: #e91e63;
+  color: #e65100;  // deep orange 900
   font-size: 18px;
 }
 
