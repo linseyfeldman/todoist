@@ -19,7 +19,7 @@ body {
   line-height: 1;
   font-family: 'Roboto', sans-serif;
   color: #202020;
-  background-color: #fafafa;
+  background-color: #fff0f5;
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -33,7 +33,7 @@ ul {
 // Variables
 $generic-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 4px 11px;
 $generic-border: 1px solid #f1f1f1;
-$generic-bg: #e91e63;
+$generic-bg: #e91e8c;
 
 /* Mixins
   ============================================ */
@@ -146,7 +146,7 @@ $generic-bg: #e91e63;
 /* Header
   ============================================ */
 header {
-  border-bottom: solid 1px #c2185b;
+  border-bottom: solid 1px #c2187a;
   background-color: $generic-bg;
   -webkit-transition: height 200ms ease-in;
   transition: height 200ms ease-in;
@@ -258,7 +258,7 @@ header {
   overflow-x: hidden;
   overflow-y: hidden;
   border-right: $generic-border;
-  background-color: #fafafa;
+  background-color: #fff0f5;
 
   @include mq('900px') {
     display: none;
@@ -304,27 +304,27 @@ header {
 
     &:nth-child(1) {
       .sidebar__dot {
-        color: #f06292;
+        color: #f48fb1;
       }
     }
     &:nth-child(2) {
       .sidebar__dot {
-        color: #ec407a;
+        color: #f06292;
       }
     }
     &:nth-child(3) {
       .sidebar__dot {
-        color: #e91e63;
+        color: #e91e8c;
       }
     }
     &:nth-child(4) {
       .sidebar__dot {
-        color: #c2185b;
+        color: #c2187a;
       }
     }
     &:nth-child(5) {
       .sidebar__dot {
-        color: #ad1457;
+        color: #ad1472;
       }
     }
   }
@@ -623,7 +623,7 @@ header {
 }
 
 .add-task__plus, .add-project__plus {
-  color: #e91e63;
+  color: #e91e8c;
   font-size: 18px;
 }
 
