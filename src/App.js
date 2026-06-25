@@ -4,7 +4,7 @@ import { Header } from './components/layout/Header';
 import { Content } from './components/layout/Content';
 import { ProjectsProvider, SelectedProjectProvider } from './context';
 
-export const App = ({ darkModeDefault = false }) => {
+export const App = ({ darkModeDefault = true }) => {
   const [darkMode, setDarkMode] = useState(darkModeDefault);
 
   return (
@@ -12,7 +12,7 @@ export const App = ({ darkModeDefault = false }) => {
       <ProjectsProvider>
         <main
           data-testid="application"
-          className={darkMode ? 'darkmode' : undefined}
+          data-theme={darkMode ? 'dark' : 'light'}
         >
           <Header darkMode={darkMode} setDarkMode={setDarkMode} />
           <Content />
