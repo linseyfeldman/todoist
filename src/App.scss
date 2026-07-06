@@ -293,7 +293,7 @@ header {
       display: none;
 
       svg {
-        color: #ce93d8;
+        color: #ce93d8; // Purple 200
       }
     }
 
@@ -353,7 +353,7 @@ header {
     cursor: pointer;
 
     span {
-      color: #7b1fa2;
+      color: #7b1fa2; // Purple 700
       margin-right: 10px;
 
       svg.hidden-projects {
@@ -364,7 +364,7 @@ header {
 
     h2 {
       margin: 0;
-      color: #4a148c;
+      color: #4a148c; // Purple 900
       font-size: 15px;
       font-weight: bold;
       padding-bottom: 20px;
@@ -403,7 +403,7 @@ header {
           svg {
             width: 18px;
             height: 18px;
-            color: #9c27b0;
+            color: #9c27b0; // Purple 500
           }
         }
       }
@@ -483,7 +483,7 @@ header {
     font-size: 20px;
     font-weight: normal;
     margin: 0 30px 20px 0;
-    color: #4a148c;
+    color: #4a148c; // Purple 900
   }
 
   .add-task {
@@ -517,12 +517,12 @@ header {
 
       .checkbox {
         cursor: pointer;
-        border-color: #9c27b0;
-        color: #9c27b0;
+        border-color: #9c27b0; // Purple 500
+        color: #9c27b0; // Purple 500
         height: 16px;
         width: 16px;
         display: block;
-        border: 1px solid #9c27b0;
+        border: 1px solid #9c27b0; // Purple 500
         border-radius: 16px;
       }
     }
@@ -571,7 +571,7 @@ header {
 
     .add-task__cancel-x {
       cursor: pointer;
-      color: #9c27b0;
+      color: #9c27b0; // Purple 500
       float: right;
       font-weight: bold;
       font-size: 12px;
@@ -586,7 +586,7 @@ header {
   &__project, &__date {
     cursor: pointer;
     float: right;
-    color: #9c27b0;
+    color: #9c27b0; // Purple 500
     margin: 20px 10px;
   }
 
@@ -596,7 +596,7 @@ header {
 
   &__content {
     width: 100%;
-    border: 1px solid #ce93d8;
+    border: 1px solid #ce93d8; // Purple 200
     background-color: white !important;
     border-radius: 3px;
     height: 35px;
@@ -630,7 +630,7 @@ header {
 
 .add-task__text, .add-project__text {
   display: inline-block;
-  color: #6a1b9a;
+  color: #6a1b9a; // Purple 800
   font-size: 14px;
   margin-left: 15px;
 }
@@ -661,7 +661,7 @@ header {
         margin-right: 10px;
 
         svg {
-          fill: #9c27b0;
+          fill: #9c27b0; // Purple 500
         }
       }
     }
@@ -703,7 +703,7 @@ header {
 
   &__name {
     width: 100%;
-    border: 1px solid #ce93d8;
+    border: 1px solid #ce93d8; // Purple 200
     background-color: white !important;
     border-radius: 3px;
     height: 35px;
