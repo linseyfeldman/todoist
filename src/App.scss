@@ -19,7 +19,7 @@ body {
   line-height: 1;
   font-family: 'Roboto', sans-serif;
   color: #202020;
-  background-color: #fafafa;
+  background-color: #f3e5f5;
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -32,7 +32,7 @@ ul {
 
 // Variables
 $generic-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 4px 11px;
-$generic-border: 1px solid #f1f1f1;
+$generic-border: 1px solid #e1bee7;
 $generic-bg: #9c27b0; // Purple 500
 
 /* Mixins
@@ -117,12 +117,12 @@ $generic-bg: #9c27b0; // Purple 500
   padding-bottom: 10px;
   font-size: 14px;
   list-style-type: none;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #e1bee7;
   padding-left: 10px;
   cursor: pointer;
 
   &:hover {
-    background-color: #f9f9f9;
+    background-color: #f3e5f5;
   }
 }
 
@@ -258,7 +258,7 @@ header {
   overflow-x: hidden;
   overflow-y: hidden;
   border-right: $generic-border;
-  background-color: #fafafa;
+  background-color: #f3e5f5;
 
   @include mq('900px') {
     display: none;
@@ -293,13 +293,13 @@ header {
       display: none;
 
       svg {
-        color: #cacaca;
+        color: #ce93d8;
       }
     }
 
     &.active, &:hover {
       font-weight: bold;
-      background-color: white;
+      background-color: #e1bee7;
     }
 
     &:nth-child(1) {
@@ -353,7 +353,7 @@ header {
     cursor: pointer;
 
     span {
-      color: #0000008a;
+      color: #7b1fa2;
       margin-right: 10px;
 
       svg.hidden-projects {
@@ -364,7 +364,7 @@ header {
 
     h2 {
       margin: 0;
-      color: #333;
+      color: #4a148c;
       font-size: 15px;
       font-weight: bold;
       padding-bottom: 20px;
@@ -403,14 +403,14 @@ header {
           svg {
             width: 18px;
             height: 18px;
-            color: #555;
+            color: #9c27b0;
           }
         }
       }
 
       &.active, &:hover {
         font-weight: bold;
-        background-color: white;
+        background-color: #e1bee7;
       }
     }
   }
@@ -483,6 +483,7 @@ header {
     font-size: 20px;
     font-weight: normal;
     margin: 0 30px 20px 0;
+    color: #4a148c;
   }
 
   .add-task {
@@ -499,7 +500,7 @@ header {
     padding-bottom: 10px;
     font-size: 14px;
     list-style-type: none;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #e1bee7;
 
     .checkbox-holder {
       margin-right: 20px;
@@ -516,12 +517,12 @@ header {
 
       .checkbox {
         cursor: pointer;
-        border-color: gray;
-        color: #343434;
+        border-color: #9c27b0;
+        color: #9c27b0;
         height: 16px;
         width: 16px;
         display: block;
-        border: 1px solid gray;
+        border: 1px solid #9c27b0;
         border-radius: 16px;
       }
     }
@@ -532,7 +533,7 @@ header {
   ============================================ */
 .add-task {
   &__overlay {
-    background: rgba(102,102,102,0.5);
+    background: rgba(74,20,140,0.4);
     position: absolute;
     margin: auto;
     top: 0;
@@ -570,7 +571,7 @@ header {
 
     .add-task__cancel-x {
       cursor: pointer;
-      color: gray;
+      color: #9c27b0;
       float: right;
       font-weight: bold;
       font-size: 12px;
@@ -585,7 +586,7 @@ header {
   &__project, &__date {
     cursor: pointer;
     float: right;
-    color: gray;
+    color: #9c27b0;
     margin: 20px 10px;
   }
 
@@ -595,7 +596,7 @@ header {
 
   &__content {
     width: 100%;
-    border: 1px solid #ddd;
+    border: 1px solid #ce93d8;
     background-color: white !important;
     border-radius: 3px;
     height: 35px;
@@ -629,7 +630,7 @@ header {
 
 .add-task__text, .add-project__text {
   display: inline-block;
-  color: #545454;
+  color: #6a1b9a;
   font-size: 14px;
   margin-left: 15px;
 }
@@ -660,7 +661,7 @@ header {
         margin-right: 10px;
 
         svg {
-          fill: grey;
+          fill: #9c27b0;
         }
       }
     }
@@ -702,7 +703,7 @@ header {
 
   &__name {
     width: 100%;
-    border: 1px solid #ddd;
+    border: 1px solid #ce93d8;
     background-color: white !important;
     border-radius: 3px;
     height: 35px;
