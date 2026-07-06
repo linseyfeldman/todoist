@@ -33,7 +33,7 @@ ul {
 // Variables
 $generic-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 4px 11px;
 $generic-border: 1px solid #f1f1f1;
-$generic-bg: #009688; // Teal 500
+$generic-bg: #3eb489; // Mint Green 500
 
 /* Mixins
   ============================================ */
@@ -146,7 +146,7 @@ $generic-bg: #009688; // Teal 500
 /* Header
   ============================================ */
 header {
-  border-bottom: solid 1px #00796b; // Teal 700
+  border-bottom: solid 1px #2e8b6e; // Mint Green 700
   background-color: $generic-bg;
   -webkit-transition: height 200ms ease-in;
   transition: height 200ms ease-in;
@@ -304,27 +304,27 @@ header {
 
     &:nth-child(1) {
       .sidebar__dot {
-        color: #80cbc4; // Teal 200
+        color: #a8e6cf; // Mint Green 200
       }
     }
     &:nth-child(2) {
       .sidebar__dot {
-        color: #26a69a; // Teal 400
+        color: #69c9a0; // Mint Green 400
       }
     }
     &:nth-child(3) {
       .sidebar__dot {
-        color: #009688; // Teal 500
+        color: #3eb489; // Mint Green 500
       }
     }
     &:nth-child(4) {
       .sidebar__dot {
-        color: #00796b; // Teal 700
+        color: #2e8b6e; // Mint Green 700
       }
     }
     &:nth-child(5) {
       .sidebar__dot {
-        color: #004d40; // Teal 900
+        color: #1a5c45; // Mint Green 900
       }
     }
   }
@@ -623,7 +623,7 @@ header {
 }
 
 .add-task__plus, .add-project__plus {
-  color: #009688; // Teal 500
+  color: #3eb489; // Mint Green 500
   font-size: 18px;
 }
 
