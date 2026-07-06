@@ -19,7 +19,7 @@ body {
   line-height: 1;
   font-family: 'Roboto', sans-serif;
   color: #202020;
-  background-color: #fafafa;
+  background-color: #f0faf5; // Mint Green tinted page background
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -32,7 +32,7 @@ ul {
 
 // Variables
 $generic-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 4px 11px;
-$generic-border: 1px solid #f1f1f1;
+$generic-border: 1px solid #c8ead8; // Mint Green tinted border
 $generic-bg: #3eb489; // Mint Green 500
 
 /* Mixins
@@ -117,12 +117,12 @@ $generic-bg: #3eb489; // Mint Green 500
   padding-bottom: 10px;
   font-size: 14px;
   list-style-type: none;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #d8f0e4; // Mint Green tinted row divider
   padding-left: 10px;
   cursor: pointer;
 
   &:hover {
-    background-color: #f9f9f9;
+    background-color: #edf8f2; // Mint Green tinted hover
   }
 }
 
@@ -258,7 +258,7 @@ header {
   overflow-x: hidden;
   overflow-y: hidden;
   border-right: $generic-border;
-  background-color: #fafafa;
+  background-color: #e8f7ef; // Mint Green tinted sidebar
 
   @include mq('900px') {
     display: none;
@@ -299,7 +299,7 @@ header {
 
     &.active, &:hover {
       font-weight: bold;
-      background-color: white;
+      background-color: #d4f0e2; // Mint Green tinted active/hover
     }
 
     &:nth-child(1) {
@@ -403,14 +403,14 @@ header {
           svg {
             width: 18px;
             height: 18px;
-            color: #555;
+            color: #3eb489; // Mint Green 500 sidebar icons
           }
         }
       }
 
       &.active, &:hover {
         font-weight: bold;
-        background-color: white;
+        background-color: #d4f0e2; // Mint Green tinted active/hover
       }
     }
   }
@@ -499,7 +499,7 @@ header {
     padding-bottom: 10px;
     font-size: 14px;
     list-style-type: none;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #d8f0e4; // Mint Green tinted task divider
 
     .checkbox-holder {
       margin-right: 20px;
@@ -516,12 +516,12 @@ header {
 
       .checkbox {
         cursor: pointer;
-        border-color: gray;
+        border-color: #3eb489; // Mint Green 500 checkbox border
         color: #343434;
         height: 16px;
         width: 16px;
         display: block;
-        border: 1px solid gray;
+        border: 1px solid #3eb489; // Mint Green 500 checkbox border
         border-radius: 16px;
       }
     }
@@ -532,7 +532,7 @@ header {
   ============================================ */
 .add-task {
   &__overlay {
-    background: rgba(102,102,102,0.5);
+    background: rgba(62,180,137,0.15); // Mint Green tinted overlay
     position: absolute;
     margin: auto;
     top: 0;
@@ -595,7 +595,7 @@ header {
 
   &__content {
     width: 100%;
-    border: 1px solid #ddd;
+    border: 1px solid #c8ead8; // Mint Green tinted input border
     background-color: white !important;
     border-radius: 3px;
     height: 35px;
@@ -660,7 +660,7 @@ header {
         margin-right: 10px;
 
         svg {
-          fill: grey;
+          fill: #3eb489; // Mint Green 500 date icons
         }
       }
     }
@@ -702,7 +702,7 @@ header {
 
   &__name {
     width: 100%;
-    border: 1px solid #ddd;
+    border: 1px solid #c8ead8; // Mint Green tinted input border
     background-color: white !important;
     border-radius: 3px;
     height: 35px;
