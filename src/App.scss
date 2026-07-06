@@ -145,13 +145,70 @@ $generic-bg: #e91e63; // Pink 500
     background-color: #282828;
     border-color: transparent;
   }
+
+  .sidebar {
+    background: #1a1a1a;
+    border-right-color: #333;
+
+    &__middle h2 {
+      color: #f48fb1;
+    }
+
+    &__middle span {
+      color: #f48fb1;
+    }
+
+    &__project {
+      &.active, &:hover {
+        background-color: #2a2a2a;
+      }
+    }
+
+    &__generic li {
+      color: #ddd;
+
+      &.active, &:hover {
+        background-color: #2a2a2a;
+      }
+
+      div:nth-child(1) span:first-of-type svg {
+        color: #f48fb1;
+      }
+    }
+  }
+
+  .tasks {
+    background-color: #222;
+    border-right-color: #333;
+
+    h2 {
+      color: #f48fb1;
+    }
+
+    &__list li {
+      border-bottom-color: #333;
+      color: #ddd;
+
+      &:hover {
+        background-color: #2a2a2a;
+      }
+    }
+  }
+
+  .add-task__text, .add-project__text {
+    color: #f48fb1;
+  }
+
+  .add-task__plus, .add-project__plus {
+    color: #f48fb1;
+  }
 }
 
 /* Header
   ============================================ */
 header {
   border-bottom: solid 1px #c2185b;
-  background-color: $generic-bg;
+  background: linear-gradient(135deg, #e91e63 0%, #ad1457 100%);
   -webkit-transition: height 200ms ease-in;
   transition: height 200ms ease-in;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
@@ -262,6 +319,7 @@ header {
   overflow-x: hidden;
   overflow-y: hidden;
   border-right: $generic-border;
+  background: linear-gradient(180deg, #fce4ec 0%, #fce4ec 60%, #fce4ec 100%);
   background-color: #fce4ec;
 
   @include mq('900px') {
@@ -303,7 +361,8 @@ header {
 
     &.active, &:hover {
       font-weight: bold;
-      background-color: #fce4ec;
+      background-color: #f8bbd0;
+      border-radius: 4px;
     }
 
     &:nth-child(1) {
@@ -414,7 +473,8 @@ header {
 
       &.active, &:hover {
         font-weight: bold;
-        background-color: #fce4ec;
+        background-color: #f8bbd0;
+        border-radius: 4px;
       }
     }
   }
@@ -468,7 +528,7 @@ header {
   ============================================ */
 .tasks {
   width: 656px;
-  background-color: white;
+  background-color: #fff;
   margin-left: 266px;
   border-right: $generic-border;
   min-height: calc(100vh);
@@ -488,6 +548,8 @@ header {
     font-weight: normal;
     margin: 0 30px 20px 0;
     color: #880e4f;
+    border-bottom: 2px solid #f8bbd0;
+    padding-bottom: 10px;
   }
 
   .add-task {
@@ -532,10 +594,12 @@ header {
         display: block;
         border: 1px solid #e91e63;
         border-radius: 16px;
+        transition: background-color 0.15s ease, border-color 0.15s ease;
 
         &:hover {
           background-color: #fce4ec;
           border-color: #c2185b;
+          box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.15);
         }
       }
     }
@@ -574,6 +638,7 @@ header {
       padding: 20px 30px;
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
+      box-shadow: 0 8px 32px rgba(233, 30, 99, 0.18);
 
       .header {
         font-size: 13px;
@@ -615,10 +680,12 @@ header {
     height: 35px;
     padding-left: 10px;
     padding-right: 10px;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
 
     &:focus {
       outline: none;
       border-color: #e91e63;
+      box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.15);
     }
   }
 
@@ -727,10 +794,12 @@ header {
     height: 35px;
     padding-left: 10px;
     padding-right: 10px;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
 
     &:focus {
       outline: none;
       border-color: #e91e63;
+      box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.15);
     }
   }
 
