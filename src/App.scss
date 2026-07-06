@@ -19,7 +19,7 @@ body {
   line-height: 1;
   font-family: 'Roboto', sans-serif;
   color: #202020;
-  background-color: #fafafa;
+  background-color: #fce4ec;
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -32,7 +32,7 @@ ul {
 
 // Variables
 $generic-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 4px 11px;
-$generic-border: 1px solid #f1f1f1;
+$generic-border: 1px solid #f8bbd0;
 $generic-bg: #e91e8c; // Pink 500
 
 /* Mixins
@@ -117,12 +117,12 @@ $generic-bg: #e91e8c; // Pink 500
   padding-bottom: 10px;
   font-size: 14px;
   list-style-type: none;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f8bbd0;
   padding-left: 10px;
   cursor: pointer;
 
   &:hover {
-    background-color: #f9f9f9;
+    background-color: #fce4ec;
   }
 }
 
@@ -135,11 +135,46 @@ $generic-bg: #e91e8c; // Pink 500
 /* Darkmode
   ============================================ */
 .darkmode {
+  background-color: #1f1f1f;
+  color: #ffffff;
+
   header {
     -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
     box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
     background-color: #282828;
     border-color: transparent;
+  }
+
+  .sidebar {
+    background-color: #282828;
+    border-color: #3a3a3a;
+
+    &__middle {
+      border-color: #3a3a3a;
+    }
+
+    &__generic li,
+    &__project {
+      color: #ffffff;
+
+      &.active, &:hover {
+        background-color: #333;
+      }
+    }
+  }
+
+  .tasks {
+    background-color: #1f1f1f;
+    border-color: #3a3a3a;
+
+    h2 {
+      color: #ffffff;
+    }
+
+    &__list li {
+      border-color: #3a3a3a;
+      color: #dddddd;
+    }
   }
 }
 
@@ -258,7 +293,7 @@ header {
   overflow-x: hidden;
   overflow-y: hidden;
   border-right: $generic-border;
-  background-color: #fafafa;
+  background-color: #fce4ec;
 
   @include mq('900px') {
     display: none;
@@ -299,7 +334,7 @@ header {
 
     &.active, &:hover {
       font-weight: bold;
-      background-color: white;
+      background-color: #fce4ec;
     }
 
     &:nth-child(1) {
@@ -403,14 +438,14 @@ header {
           svg {
             width: 18px;
             height: 18px;
-            color: #555;
+            color: #ad1457; // Pink 800
           }
         }
       }
 
       &.active, &:hover {
         font-weight: bold;
-        background-color: white;
+        background-color: #fce4ec;
       }
     }
   }
@@ -464,7 +499,7 @@ header {
   ============================================ */
 .tasks {
   width: 656px;
-  background-color: white;
+  background-color: #fff0f5;
   margin-left: 266px;
   border-right: $generic-border;
   min-height: calc(100vh);
@@ -499,7 +534,7 @@ header {
     padding-bottom: 10px;
     font-size: 14px;
     list-style-type: none;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f8bbd0;
 
     .checkbox-holder {
       margin-right: 20px;
@@ -516,12 +551,12 @@ header {
 
       .checkbox {
         cursor: pointer;
-        border-color: gray;
+        border-color: #e91e8c;
         color: #343434;
         height: 16px;
         width: 16px;
         display: block;
-        border: 1px solid gray;
+        border: 1px solid #e91e8c;
         border-radius: 16px;
       }
     }
@@ -595,7 +630,7 @@ header {
 
   &__content {
     width: 100%;
-    border: 1px solid #ddd;
+    border: 1px solid #f48fb1;
     background-color: white !important;
     border-radius: 3px;
     height: 35px;
@@ -629,7 +664,7 @@ header {
 
 .add-task__text, .add-project__text {
   display: inline-block;
-  color: #545454;
+  color: #ad1457; // Pink 800
   font-size: 14px;
   margin-left: 15px;
 }
@@ -660,7 +695,7 @@ header {
         margin-right: 10px;
 
         svg {
-          fill: grey;
+          fill: #e91e8c;
         }
       }
     }
@@ -702,7 +737,7 @@ header {
 
   &__name {
     width: 100%;
-    border: 1px solid #ddd;
+    border: 1px solid #f48fb1;
     background-color: white !important;
     border-radius: 3px;
     height: 35px;
