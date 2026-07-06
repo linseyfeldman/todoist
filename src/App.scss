@@ -19,7 +19,7 @@ body {
   line-height: 1;
   font-family: 'Roboto', sans-serif;
   color: #202020;
-  background-color: #fafafa;
+  background-color: #fce4ec;
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -32,8 +32,8 @@ ul {
 
 // Variables
 $generic-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 4px 11px;
-$generic-border: 1px solid #f1f1f1;
-$generic-bg: #009688; // Teal 500
+$generic-border: 1px solid #f8bbd0;
+$generic-bg: #e91e63; // Pink 500
 
 /* Mixins
   ============================================ */
@@ -92,10 +92,14 @@ $generic-bg: #009688; // Teal 500
   text-decoration: none !important;
   text-align: center;
   cursor: pointer;
+
+  &:hover {
+    background-color: #c2185b;
+  }
 }
 
 @mixin cancel() {
-  color: #555;
+  color: #ad1457;
   cursor: pointer;
   font-size: 14px;
   margin: 2px 5px;
@@ -117,12 +121,12 @@ $generic-bg: #009688; // Teal 500
   padding-bottom: 10px;
   font-size: 14px;
   list-style-type: none;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f8bbd0;
   padding-left: 10px;
   cursor: pointer;
 
   &:hover {
-    background-color: #f9f9f9;
+    background-color: #fce4ec;
   }
 }
 
@@ -141,13 +145,70 @@ $generic-bg: #009688; // Teal 500
     background-color: #282828;
     border-color: transparent;
   }
+
+  .sidebar {
+    background: #1a1a1a;
+    border-right-color: #333;
+
+    &__middle h2 {
+      color: #f48fb1;
+    }
+
+    &__middle span {
+      color: #f48fb1;
+    }
+
+    &__project {
+      &.active, &:hover {
+        background-color: #2a2a2a;
+      }
+    }
+
+    &__generic li {
+      color: #ddd;
+
+      &.active, &:hover {
+        background-color: #2a2a2a;
+      }
+
+      div:nth-child(1) span:first-of-type svg {
+        color: #f48fb1;
+      }
+    }
+  }
+
+  .tasks {
+    background-color: #222;
+    border-right-color: #333;
+
+    h2 {
+      color: #f48fb1;
+    }
+
+    &__list li {
+      border-bottom-color: #333;
+      color: #ddd;
+
+      &:hover {
+        background-color: #2a2a2a;
+      }
+    }
+  }
+
+  .add-task__text, .add-project__text {
+    color: #f48fb1;
+  }
+
+  .add-task__plus, .add-project__plus {
+    color: #f48fb1;
+  }
 }
 
 /* Header
   ============================================ */
 header {
-  border-bottom: solid 1px #00796b; // Teal 700
-  background-color: $generic-bg;
+  border-bottom: solid 1px #c2185b;
+  background: linear-gradient(135deg, #e91e63 0%, #ad1457 100%);
   -webkit-transition: height 200ms ease-in;
   transition: height 200ms ease-in;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
@@ -258,7 +319,8 @@ header {
   overflow-x: hidden;
   overflow-y: hidden;
   border-right: $generic-border;
-  background-color: #fafafa;
+  background: linear-gradient(180deg, #fce4ec 0%, #fce4ec 60%, #fce4ec 100%);
+  background-color: #fce4ec;
 
   @include mq('900px') {
     display: none;
@@ -293,38 +355,39 @@ header {
       display: none;
 
       svg {
-        color: #cacaca;
+        color: #f48fb1;
       }
     }
 
     &.active, &:hover {
       font-weight: bold;
-      background-color: white;
+      background-color: #f8bbd0;
+      border-radius: 4px;
     }
 
     &:nth-child(1) {
       .sidebar__dot {
-        color: #80cbc4; // Teal 200
+        color: #f48fb1; // Pink 200
       }
     }
     &:nth-child(2) {
       .sidebar__dot {
-        color: #26a69a; // Teal 400
+        color: #ec407a; // Pink 400
       }
     }
     &:nth-child(3) {
       .sidebar__dot {
-        color: #009688; // Teal 500
+        color: #e91e63; // Pink 500
       }
     }
     &:nth-child(4) {
       .sidebar__dot {
-        color: #00796b; // Teal 700
+        color: #c2185b; // Pink 700
       }
     }
     &:nth-child(5) {
       .sidebar__dot {
-        color: #004d40; // Teal 900
+        color: #880e4f; // Pink 900
       }
     }
   }
@@ -353,7 +416,7 @@ header {
     cursor: pointer;
 
     span {
-      color: #0000008a;
+      color: #ad1457;
       margin-right: 10px;
 
       svg.hidden-projects {
@@ -364,7 +427,7 @@ header {
 
     h2 {
       margin: 0;
-      color: #333;
+      color: #880e4f;
       font-size: 15px;
       font-weight: bold;
       padding-bottom: 20px;
@@ -403,14 +466,15 @@ header {
           svg {
             width: 18px;
             height: 18px;
-            color: #555;
+            color: #c2185b;
           }
         }
       }
 
       &.active, &:hover {
         font-weight: bold;
-        background-color: white;
+        background-color: #f8bbd0;
+        border-radius: 4px;
       }
     }
   }
@@ -464,7 +528,7 @@ header {
   ============================================ */
 .tasks {
   width: 656px;
-  background-color: white;
+  background-color: #fff;
   margin-left: 266px;
   border-right: $generic-border;
   min-height: calc(100vh);
@@ -483,6 +547,9 @@ header {
     font-size: 20px;
     font-weight: normal;
     margin: 0 30px 20px 0;
+    color: #880e4f;
+    border-bottom: 2px solid #f8bbd0;
+    padding-bottom: 10px;
   }
 
   .add-task {
@@ -499,7 +566,11 @@ header {
     padding-bottom: 10px;
     font-size: 14px;
     list-style-type: none;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f8bbd0;
+
+    &:hover {
+      background-color: #fce4ec;
+    }
 
     .checkbox-holder {
       margin-right: 20px;
@@ -516,13 +587,20 @@ header {
 
       .checkbox {
         cursor: pointer;
-        border-color: gray;
-        color: #343434;
+        border-color: #e91e63;
+        color: #e91e63;
         height: 16px;
         width: 16px;
         display: block;
-        border: 1px solid gray;
+        border: 1px solid #e91e63;
         border-radius: 16px;
+        transition: background-color 0.15s ease, border-color 0.15s ease;
+
+        &:hover {
+          background-color: #fce4ec;
+          border-color: #c2185b;
+          box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.15);
+        }
       }
     }
   }
@@ -532,7 +610,7 @@ header {
   ============================================ */
 .add-task {
   &__overlay {
-    background: rgba(102,102,102,0.5);
+    background: rgba(136,14,79,0.3);
     position: absolute;
     margin: auto;
     top: 0;
@@ -560,6 +638,7 @@ header {
       padding: 20px 30px;
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
+      box-shadow: 0 8px 32px rgba(233, 30, 99, 0.18);
 
       .header {
         font-size: 13px;
@@ -570,7 +649,7 @@ header {
 
     .add-task__cancel-x {
       cursor: pointer;
-      color: gray;
+      color: #e91e63;
       float: right;
       font-weight: bold;
       font-size: 12px;
@@ -585,7 +664,7 @@ header {
   &__project, &__date {
     cursor: pointer;
     float: right;
-    color: gray;
+    color: #e91e63;
     margin: 20px 10px;
   }
 
@@ -595,12 +674,19 @@ header {
 
   &__content {
     width: 100%;
-    border: 1px solid #ddd;
+    border: 1px solid #f48fb1;
     background-color: white !important;
     border-radius: 3px;
     height: 35px;
     padding-left: 10px;
     padding-right: 10px;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+    &:focus {
+      outline: none;
+      border-color: #e91e63;
+      box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.15);
+    }
   }
 
   &__cancel, &__submit {
@@ -623,13 +709,13 @@ header {
 }
 
 .add-task__plus, .add-project__plus {
-  color: #009688; // Teal 500
+  color: #e91e63;
   font-size: 18px;
 }
 
 .add-task__text, .add-project__text {
   display: inline-block;
-  color: #545454;
+  color: #ad1457;
   font-size: 14px;
   margin-left: 15px;
 }
@@ -660,7 +746,7 @@ header {
         margin-right: 10px;
 
         svg {
-          fill: grey;
+          fill: #e91e63;
         }
       }
     }
@@ -702,12 +788,19 @@ header {
 
   &__name {
     width: 100%;
-    border: 1px solid #ddd;
+    border: 1px solid #f48fb1;
     background-color: white !important;
     border-radius: 3px;
     height: 35px;
     padding-left: 10px;
     padding-right: 10px;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+    &:focus {
+      outline: none;
+      border-color: #e91e63;
+      box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.15);
+    }
   }
 
   &__submit {
