@@ -19,7 +19,7 @@ body {
   line-height: 1;
   font-family: 'Roboto', sans-serif;
   color: #202020;
-  background-color: #fafafa;
+  background-color: #f2faf6;
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -33,7 +33,7 @@ ul {
 // Variables
 $generic-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 4px 11px;
 $generic-border: 1px solid #f1f1f1;
-$generic-bg: #009688; // Teal 500
+$generic-bg: #3eb489; // Mint Green
 
 /* Mixins
   ============================================ */
@@ -138,7 +138,7 @@ $generic-bg: #009688; // Teal 500
   header {
     -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
     box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
-    background-color: #282828;
+    background-color: #1a3329;
     border-color: transparent;
   }
 }
@@ -146,7 +146,7 @@ $generic-bg: #009688; // Teal 500
 /* Header
   ============================================ */
 header {
-  border-bottom: solid 1px #00796b; // Teal 700
+  border-bottom: solid 1px #2e8b6e; // Mint Dark
   background-color: $generic-bg;
   -webkit-transition: height 200ms ease-in;
   transition: height 200ms ease-in;
@@ -258,7 +258,7 @@ header {
   overflow-x: hidden;
   overflow-y: hidden;
   border-right: $generic-border;
-  background-color: #fafafa;
+  background-color: #f2faf6;
 
   @include mq('900px') {
     display: none;
@@ -304,27 +304,27 @@ header {
 
     &:nth-child(1) {
       .sidebar__dot {
-        color: #80cbc4; // Teal 200
+        color: #aee8d0; // Mint 200
       }
     }
     &:nth-child(2) {
       .sidebar__dot {
-        color: #26a69a; // Teal 400
+        color: #5ecba1; // Mint 400
       }
     }
     &:nth-child(3) {
       .sidebar__dot {
-        color: #009688; // Teal 500
+        color: #3eb489; // Mint 500
       }
     }
     &:nth-child(4) {
       .sidebar__dot {
-        color: #00796b; // Teal 700
+        color: #2e8b6e; // Mint 700
       }
     }
     &:nth-child(5) {
       .sidebar__dot {
-        color: #004d40; // Teal 900
+        color: #1a5c40; // Mint 900
       }
     }
   }
@@ -623,7 +623,7 @@ header {
 }
 
 .add-task__plus, .add-project__plus {
-  color: #009688; // Teal 500
+  color: #3eb489; // Mint 500
   font-size: 18px;
 }
 
