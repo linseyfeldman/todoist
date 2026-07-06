@@ -299,7 +299,7 @@ header {
 
     &.active, &:hover {
       font-weight: bold;
-      background-color: white;
+      background-color: #f9fefb;
     }
 
     &:nth-child(1) {
@@ -410,7 +410,7 @@ header {
 
       &.active, &:hover {
         font-weight: bold;
-        background-color: white;
+        background-color: #f9fefb;
       }
     }
   }
@@ -428,7 +428,7 @@ header {
     padding: 10px;
     top: 10px;
     right: 0;
-    background-color: white;
+    background-color: #f9fefb;
 
     p {
       margin-top: 5px;
@@ -464,7 +464,7 @@ header {
   ============================================ */
 .tasks {
   width: 656px;
-  background-color: white;
+  background-color: #f9fefb;
   margin-left: 266px;
   border-right: $generic-border;
   min-height: calc(100vh);
@@ -553,7 +553,7 @@ header {
       margin-bottom: 20px;
       margin-top: 55px;
       border-radius: 5px;
-      background-color: white;
+      background-color: #f9fefb;
       position: absolute;
       left: 50%;
       top: 50%;
@@ -638,7 +638,7 @@ header {
   ============================================ */
 .task-date {
   @include box-overlay();
-  background-color: #fff;
+  background-color: #f9fefb;
   width: 200px;
   right: 0;
 
@@ -671,7 +671,7 @@ header {
   ============================================ */
 .project-overlay {
   @include box-overlay();
-  background-color: white;
+  background-color: #f9fefb;
 
   @include mq('900px') {
     width: 200px;
